@@ -2,7 +2,7 @@
 import numpy as np
 
 
-test_matrix = np.matrix('1 2; 3 4 ')
+test_matrix = np.matrix('1 2 3 4; 1 0 2 0; 0 1 2 3; 2 3 0 0 ')
 
 DEBUG = False
 
@@ -36,10 +36,7 @@ def nxn_determinant(matrix, sum = 0):
 
 	if type(base_determinant) != type(3):
 		for index in range(matrix[0,:].shape[1]):
-			if index % 2 == 0:
-				factor = matrix.item((0,index))
-			else:
-				factor = matrix.item((0,index)) * -1
+			factor = matrix.item((0,index)) * (-1)**(index+1)
 
 			sum += factor * (nxn_determinant(submatrix(matrix, index)))
 			if DEBUG:
