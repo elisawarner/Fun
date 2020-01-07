@@ -14,7 +14,7 @@ This repository contains some code I made for fun that practices recursion. Ther
 All code requires Python 3.6  
 * `determinant.py` : requires `numpy`  
 * `factorial.py` : none  
-* `random_sub.py` : pandas, random, time  
+* `random_sub.py` : `pandas`, `random`, `time` 
 
 All files have been tested on a Mac. 
 
